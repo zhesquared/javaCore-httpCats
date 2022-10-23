@@ -29,8 +29,8 @@ public class Main {
             mapper.readValue(response.getEntity().getContent(),
                             new TypeReference<List<CatsFacts>>() {
                             })
-                    .stream().
-                    filter(facts -> facts.getUpvotes() != 0 && facts.getUpvotes() > 0)
+                    .stream()
+                    .filter(facts -> facts.getUpvotes() != 0 && facts.getUpvotes() > 0)
                     .forEach(System.out::println);
 
             response.close();
